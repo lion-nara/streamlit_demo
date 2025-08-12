@@ -8,6 +8,21 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+import matplotlib.pyplot as plt
+import matplotlib
+import platform
+
+# 한글 폰트 설정
+if platform.system() == 'Windows':
+    matplotlib.rc('font', family='Malgun Gothic')
+elif platform.system() == 'Darwin':  # Mac
+    matplotlib.rc('font', family='AppleGothic')
+else:  # 리눅스 (Streamlit Cloud)
+    matplotlib.rc('font', family='NanumGothic')
+
+# 마이너스 깨짐 방지
+matplotlib.rcParams['axes.unicode_minus'] = False
+
 st.set_page_config(page_title="연금 & 가치주 대시보드", page_icon="💰", layout="wide")
 
 st.title("💰 연금 & 가치주 대시보드")
