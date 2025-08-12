@@ -1,6 +1,11 @@
 streamlit == 1.48.0
 pandas == 2.3.1
 
+streamlit>=1.33
+pandas
+numpy
+matplotlib==3.8.*
+
 # C:\Users\panar\streamlit_demo>pip freeze > requirments.txt 
 # 배포를 위한 런타임
 
